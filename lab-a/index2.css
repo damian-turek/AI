@@ -78,7 +78,7 @@ main {
 
         height: 70vh;
 
-        background: url("./images/hero.jpg") no-repeat center/cover;
+        background: url("images/hero.jpg") no-repeat center/cover;
 
         & h1 {
             padding: 0 20%;
@@ -115,7 +115,11 @@ main {
 
     & ul {
         width: 80%;
+
+        border: 10px solid #34495e;
+
         margin: 30px 0;
+
         list-style-type: square;
         padding-left: 20px;
         color: #34495e;

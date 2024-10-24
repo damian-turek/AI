@@ -1,0 +1,71 @@
+input {
+    border-radius: 20px;
+    border: 1px solid #ccc; /* Dodanie obramowania */
+    width: 250px; /* Zwiększona szerokość dla lepszej czytelności */
+    height: 40px; /* Większa wysokość */
+    padding: 0 15px; /* Wyrównanie wewnętrzne dla lepszego komfortu */
+    font-size: 16px; /* Większy rozmiar czcionki */
+    transition: border 0.3s; /* Animacja zmiany obramowania */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #f0f0f0;
+    color: #333;
+
+    margin: 50px 0;
+    font-family: 'Arial', sans-serif;
+
+    input:focus {
+        border-color: #007BFF;
+        outline: none;
+    }
+
+    button {
+        background-color: #007BFF;
+        color: white;
+
+        border: none;
+        border-radius: 5px;
+
+        padding: 10px 15px;
+
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        font-size: 16px;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    #task-list {
+        list-style-type: none;
+
+        padding: 0;
+
+        width: 100%;
+        max-width: 400px;
+    }
+
+    #task-list li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center; /* Wyrównanie tekstu i przycisku */
+        padding: 10px; /* Padding dla lepszego wyglądu */
+        margin-bottom: 10px;
+        background-color: #ffffff; /* Tło dla elementów listy */
+        border-radius: 5px; /* Zaokrąglone rogi dla elementów listy */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Lekki cień dla głębi */
+        transition: background-color 0.3s; /* Animacja zmiany koloru tła */
+    }
+
+    #task-list li:hover {
+        background-color: #f8f9fa;
+    }
+}

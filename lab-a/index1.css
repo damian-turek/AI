@@ -64,7 +64,7 @@ main {
 
         height: 80vh;
 
-        background: url("./images/hero.jpg") no-repeat fixed;
+        background: url("images/hero.jpg") no-repeat fixed;
 
         @media (max-width: 1000px) {
             height: 1000px;
@@ -91,7 +91,11 @@ main {
     & ul {
         width: 80%;
 
+        border: 5px dotted saddlebrown;
+        border-radius: 15px;
+
         margin: 50px 0;
+        padding: 10px;
         list-style-type: none;
 
         line-height: 25px;
