@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
             item.style.gap = '20px'
             item.style.margin = '10px 0 0'
 
-            item.innerHTML = `${element[0]} ${element[1]} <button id="${index}">Usuń</button>`;
+            item.innerHTML = `${element[0]} ${element[1]} <button id="${index}">Delete</button>`;
 
             const deleteTaskBtn = item.querySelector('button')
             deleteTaskBtn.addEventListener('click', ((index) => {deleteTask(index)}))
