@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    display: grid;
+    place-items: center;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f3f4f6;
+    padding: 20px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    width: 70vw;
+    height: 70vh;
+    margin-bottom: 20px;
+
+    .box {
+        display: grid;
+        place-items: center;
+        border-radius: 10px;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    #mapBox {
+        background-color: purple;
+        display: grid;
+        place-content: center;
+        border-radius: 10px;
+
+        #map {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+    }
+
+    #imageBox {
+        background-color: purple;
+        border-radius: 10px;
+    }
+
+    #puzzleBox {
+        background-color: purple;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 8px;
+        padding: 8px;
+        border-radius: 10px;
+    }
+
+    #solutionBox {
+        background-color: purple;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-gap: 8px;
+        padding: 8px;
+        border-radius: 10px;
+    }
+}
+
+button {
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin: 10px 5px;
+    background-color: #42a5f5;
+    color: #fff;
+
+    &:hover {
+        background-color: #1e88e5;
+        transform: scale(1.05);
+    }
+
+    &:active {
+        transform: scale(0.98);
+    }
+
+    &.secondary {
+        background-color: #ff7043;
+    }
+
+    &.secondary:hover {
+        background-color: #f4511e;
+    }
+}
