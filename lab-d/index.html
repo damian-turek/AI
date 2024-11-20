@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Weather App</h1>
+    <input type="text" id="city" placeholder="Enter city name">
+    <div>
+        <label>
+            <input class="radio" type="radio" name="requestMethod" value="fetch" checked>
+            Fetch API
+        </label>
+        <label>
+            <input class="radio" type="radio" name="requestMethod" value="xhr">
+            XMLHttpRequest
+        </label>
+    </div>
+    <button id="getWeather">Get Weather</button>
+    <div id="weatherResult"></div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
