@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    text-align: justify;
+
+    font-family: sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+
+    height: 70px;
+    width: 100%;
+
+    background-color: purple;
+
+    @media (max-width: 1000px) {
+        height: 200px;
+    }
+
+    & img {
+        height: 40px;
+        padding: 0 10px 0 0;
+    }
+
+    & nav {
+        text-transform: uppercase;
+        font-weight: 900;
+
+        transition: 0.4s;
+
+        @media (max-width: 1000px) {
+            font-size: 30px;
+        }
+
+        & a {
+            text-decoration: none;
+            color: black;
+        }
+
+        &:hover {
+            color: red;
+        }
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: purple;
+
+    .hero {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        height: 80vh;
+
+        background: url("../images/hero.jpg") no-repeat fixed;
+
+        @media (max-width: 1000px) {
+            height: 1000px;
+        }
+
+        & > h1{
+            padding: 0 30% 0 10%;
+            font-size: 60px;
+            color: green;
+            text-align: left;
+
+            @media (max-width: 716px) {
+                font-size: 45px;
+            }
+        }
+    }
+
+    & section {
+        width: 80%;
+
+        margin: 50px 0 0;
+    }
+
+    & ul {
+        width: 80%;
+
+        border: 5px dotted black;
+        border-radius: 15px;
+
+        margin: 50px 0;
+        padding: 10px;
+        list-style-type: none;
+
+        line-height: 25px;
+    }
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    height: 200px;
+
+    background-color: purple;
+    padding: 20px;
+
+    & h3 {
+        font-size: 40px;
+
+        @media (max-width: 1000px) {
+            font-size: 60px;
+            text-align: center;
+        }
+    }
+
+    & div {
+        display: flex;
+        flex-direction: column;
+
+
+        & a {
+            text-decoration: none;
+            color: black;
+
+            transition: 0.4s;
+
+            @media (max-width: 1000px) {
+                font-size: 30px;
+                text-align: center;
+            }
+
+            &:hover {
+                color: saddlebrown;
+            }
+        }
+    }
+}
+
