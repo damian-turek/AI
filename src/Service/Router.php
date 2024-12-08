@@ -13,5 +13,7 @@ class Router
     public function redirect($path): void
     {
         header("Location: $path");
+        exit; // Zakończenie dalszego przetwarzania kodu po przekierowaniu
     }
+
 }

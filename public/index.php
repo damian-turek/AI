@@ -8,6 +8,9 @@ $router = new \App\Service\Router();
 
 $action = $_REQUEST['action'] ?? null;
 switch ($action) {
+
+
+    // Post actions
     case 'post-index':
     case null:
         $controller = new \App\Controller\PostController();
@@ -38,10 +41,40 @@ switch ($action) {
         $controller = new \App\Controller\PostController();
         $view = $controller->deleteAction($_REQUEST['id'], $router);
         break;
+
+    case 'comment-index':
+    case 'comment-show':
+        if (! $_REQUEST['id']) {
+            break;
+        }
+        $controller = new \App\Controller\CommentController();
+        $view = $controller->showAction($_REQUEST['id'], $templating, $router);
+        break;
+    case 'comment-create':
+        $controller = new \App\Controller\CommentController();
+        $view = $controller->createAction($_REQUEST['comment'] ?? null, $templating, $router);
+        break;
+    case 'comment-edit':
+        if (! $_REQUEST['id']) {
+            break;
+        }
+        $controller = new \App\Controller\CommentController();
+        $view = $controller->editAction($_REQUEST['id'], $_REQUEST['comment'] ?? null, $templating, $router);
+        break;
+    case 'comment-delete':
+        if (! $_REQUEST['id']) {
+            break;
+        }
+        $controller = new \App\Controller\CommentController();
+        $view = $controller->deleteAction($_REQUEST['id'], $router);
+        break;
+
+    // Info action
     case 'info':
         $controller = new \App\Controller\InfoController();
         $view = $controller->infoAction();
         break;
+
     default:
         $view = 'Not found';
         break;
